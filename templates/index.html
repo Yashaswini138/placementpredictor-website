@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Placement Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>AI Placement Predictor</h1>
+
+    <form action="/predict" method="post">
+
+        <input name="Gender" placeholder="Gender (1=Male, 0=Female)" required>
+        <input name="Age" placeholder="Age" required>
+        <input name="Degree" placeholder="Degree (0-4)" required>
+        <input name="CGPA" placeholder="CGPA" required>
+        <input name="Internships_Count" placeholder="Internships" required>
+        <input name="Projects_Count" placeholder="Projects" required>
+        <input name="Certifications_Count" placeholder="Certifications" required>
+        <input name="Technical_Skills_Score_100" placeholder="Technical Skills" required>
+        <input name="Communication_Skills_Score_100" placeholder="Communication Skills" required>
+        <input name="Aptitude_Test_Score_100" placeholder="Aptitude Score" required>
+
+        <button type="submit">Predict</button>
+
+    </form>
+
+    <h2>{{ prediction_text }}</h2>
+</div>
+
+</body>
+</html>
